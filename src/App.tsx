@@ -1,11 +1,13 @@
 import React from 'react';
 
-import './App.css';
+import ItemExchange from './components/ItemExchange';
+import ItemList from './components/ItemList';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div >
+      <ItemList/>
+      <ItemExchange/>
     </div>
   );
 }
