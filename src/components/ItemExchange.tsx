@@ -1,22 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
+import { useTypedSelector } from "../hooks/useTypedSelector";
 import "../styles/itemExchange.scss";
+import CurrencyRow from "./CurrencyRow";
 
 const ItemExchange = () => {
+   const { curItems } = useTypedSelector((state) => state.items);
+   const [fromCurrency,setFromCurrency] = useState()
+   const [toCurrency,setToCurrency] = useState()
    return (
       <div className="container">
          <div className="currency">
-            <select name="" id="input_currency">
-               <option value="AED">AED</option>
-               <option value="ARS">ARS</option>
-            </select>
-            <input  name="" id="input_amount" value="1"></input>
+            <CurrencyRow currencyOptions={curItems} />
          </div>
          <button id="exchange">↕</button>
          <div className="currency">
-            <select name="" id="output_currency">
-               <option value="AED">AED</option>
-            </select>
-            <input  name="" id="output_amount" placeholder="0" />
+            <CurrencyRow currencyOptions={curItems} />
          </div>
          <div className="result">
             <div className="rate" id="rate"></div>

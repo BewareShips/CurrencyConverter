@@ -9,13 +9,13 @@ const initialState: ItemState = {
 };
 
 
-export const itemReducer = (state = initialState, action: ItemAction) => {
+export const itemReducer = (state = initialState, action: ItemAction):ItemState => {
   switch (action.type) {
     case ItemActionTypes.FETCH_ITEMS:
       return{...state, loading: true}
     case ItemActionTypes.FETCH_iTEMS_SUCCESS:
       return {...state,loading:false,curItems: action.payload}
-    case ItemActionTypes.FETCH_iTEMS_SUCCESS:
+    case ItemActionTypes.FETCH_iTEMS_ERROR:
       return {...state,loading:false,error:action.payload}
     default:
       return state

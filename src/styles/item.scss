@@ -1,0 +1,45 @@
+.itemContainer {
+   border: 1px solid #ccc;
+   width: 450px;
+   margin: 10px;
+   border-radius: 10px;
+   padding:10px 40px;
+   background-color:#fff;
+   // display: flex;
+   // flex-wrap: wrap;
+}
+
+.itemName{
+  // margin-left: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.itemInfo {
+   display: flex;
+   justify-content: space-between;
+  //  padding:20px;
+  //  border: 1px solid red;
+}
+
+.itemCurrency{
+  width:250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemButton{ 
+  transform: rotate(90deg);
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 2.5rem;
+  // text-align: center;
+  // justify-content: center;
+  border: none;
+  cursor: pointer
+}
+
+.itemDif{
+  display: flex;
+  align-items: center
+}

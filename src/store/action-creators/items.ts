@@ -1,7 +1,7 @@
-import { ItemActionTypes } from './../../types/item';
+
 import axios from "axios";
 import { Dispatch } from "redux";
-import { ItemAction } from "../../types/item";
+import { ItemAction, ItemActionTypes } from "../../types/item";
 
 
 export const fetchUsers = () =>{

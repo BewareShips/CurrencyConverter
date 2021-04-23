@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import { fetchUsers } from '../store/action-creators/items';
 import Item from './Item';
-import {Currency} from '../types/item'
+// import {Currency} from '../types/item'
 
-const ItemList  = () => {
+const ItemList : React.FC  = () => {
   const dispatch = useDispatch();
   const { curItems, loading, error } = useTypedSelector(
     (state) => state.items
@@ -14,10 +14,11 @@ const ItemList  = () => {
   useEffect(() => {
     dispatch(fetchUsers());
  }, [dispatch]);
- console.log(curItems)
+ console.log(curItems, 'curItems')
   return (
     <div>
-      {/* {curItems.map((item) => (
+     
+      {curItems.map((item) => (
             <Item
                key={item.ID}
                CharCode={item.CharCode}
@@ -26,7 +27,7 @@ const ItemList  = () => {
                Previous={item.Previous}
                Name={item.Name}
             />
-         ))} */}
+         ))}
       
     </div>
   )
